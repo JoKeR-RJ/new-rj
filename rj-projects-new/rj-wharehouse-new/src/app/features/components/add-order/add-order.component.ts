@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'cem-add-order',
@@ -7,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrl: './add-order.component.scss'
 })
 export class AddOrderComponent {
+  createOrderForm:FormGroup;
+
+  private _fb=inject(FormBuilder);
+
+  constructor(){
+
+  }
+
+  initializeForm(){
+    this.createOrderForm = this._fb.group({
+      name
+    })
+  }
 
 }

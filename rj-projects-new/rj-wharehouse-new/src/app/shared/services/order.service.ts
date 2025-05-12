@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ICustomer } from '../interfaces/customer.interface';
-import { IOrders } from '../interfaces/order.interface';
+import { IOrder } from '../interfaces/order.interface';
+
 
 
 @Injectable({
@@ -14,12 +14,12 @@ export class OrderService {
   
   constructor(private _http: HttpClient) {}
 
-  getOrders(): Observable<IOrders[]> {
-    return this._http.get<IOrders[]>(this.apiUrl);
+  getOrders(): Observable<IOrder[]> {
+    return this._http.get<IOrder[]>(this.apiUrl);
   }
 
-  createOrder(order: Omit<IOrders, 'id'>): Observable<IOrders> {
-    return this._http.post<IOrders>(this.apiUrl, order);
+  createOrder(order: Omit<IOrder, 'id'>): Observable<IOrder> {
+    return this._http.post<IOrder>(this.apiUrl, order);
   }
 
 

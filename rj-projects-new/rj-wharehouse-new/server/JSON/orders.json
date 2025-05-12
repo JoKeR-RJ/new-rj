@@ -1,1 +1,6 @@
-[]
+[
+    {"id":2,"productId":1,"customerId":1,"description":"prova","total":1.8},
+    {"id":3,"productId":3,"customerId":3,"description":"prova due","total":2.4},
+    {"id":4,"productId":6,"customerId":1,"description":"prova 3","total":4},
+    {"id":5,"productId":5,"customerId":2,"description":"maurys","total":4.6}
+]
