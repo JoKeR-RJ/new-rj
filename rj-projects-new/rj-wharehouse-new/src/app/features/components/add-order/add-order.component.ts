@@ -59,8 +59,7 @@ export class AddOrderComponent implements OnInit {
           this.customerList = val;
           console.log('Clienti caricati:', val);
         })
-      )
-      .subscribe();
+      ).subscribe();
   }
 
   loadProducts() {
@@ -72,8 +71,7 @@ export class AddOrderComponent implements OnInit {
           this.productList = val;
           console.log('Prodotti caricati:', val);
         })
-      )
-      .subscribe();
+      ).subscribe();
   }
 
   onProductChange(): void {
