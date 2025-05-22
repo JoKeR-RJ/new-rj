@@ -3,7 +3,6 @@ import { IProduct } from '../../../shared/interfaces/product.interface';
 import { ProductService } from '../../../shared/services/product.service';
 import { take, tap } from 'rxjs';
 import { Router } from '@angular/router';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'cem-show-products',
@@ -34,7 +33,7 @@ export class ShowProductsComponent implements OnInit{
       take(1),
       tap(items => {
         this.products = items;
-        //console.log(items);
+        console.log('loadProducts()\n',items);
       }) 
     ).subscribe();
   }
@@ -47,8 +46,7 @@ export class ShowProductsComponent implements OnInit{
     this._productService.removeProduct(id).pipe(
       tap((val)=>{
         this.products = this.products.filter(item => item.id !== id);
-        console.log(val);
-        
+        console.log('removeProduct()\n',val);
       })
     ).subscribe();
 

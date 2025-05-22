@@ -41,7 +41,7 @@ export class AddEditProductComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this._route.snapshot.params['id'];
-    if (id) {//se ce 
+    if (id) {
       this.isEdit = true;
       //chiamata al serv per prendere i dati del prodotto con quel id
       this._productService.getProductById(+id).subscribe({

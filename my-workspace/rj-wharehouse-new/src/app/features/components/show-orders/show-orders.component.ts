@@ -29,7 +29,7 @@ export class ShowOrdersComponent implements OnInit{
       take(1),
       tap((val)=>{
         this.orderList=val;
-        console.log(val);
+        console.log('loadOrders()',val);
       })
     ).subscribe();
   }
